@@ -140,3 +140,9 @@ map <leader>X    :%s/\~/\~\r/g<CR>
 " Open specs
 nnoremap <Leader>a :A<CR>
 nnoremap <Leader>A :AV<CR>
+
+map <leader>V   :CommandT app/views<CR>
+map <leader>M   :CommandT app/models<CR>
+map <leader>C   :CommandT app/controllers<CR>
+map <leader>S   :CommandT spec/<CR>
+
