@@ -146,3 +146,6 @@ nmap <C-J> i<CR><ESC>
 " Replace tildes with new lines to view X12
 map <leader>X    :%s/\~/\~\r/g<CR>
 
+" Open specs
+nnoremap <Leader>a :A<CR>
+nnoremap <Leader>A :AV<CR>
