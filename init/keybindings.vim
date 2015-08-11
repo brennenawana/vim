@@ -101,18 +101,9 @@ map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%"
 map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 
 " Run tests
-map <leader>t :wa<CR>:RunTestLine<CR>
-map <leader>T :wa<CR>:RunTest<CR>
-map <leader>tt :wa<CR>:RunTestAgain<CR>
-
-map <F12> :write<CR>:RunTest<CR>
-imap <F12> <ESC><F12>
-map <F11> :write<CR>:RunTestLine<CR>
-imap <F11> <ESC><F11>
-map <F10> :write<CR>:RunTestAgain<CR>
-imap <F10> <ESC><F10>
-map <F9> :write<CR>:RunTestPrevious<CR>
-imap <F9> <ESC><F9>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>ls :call RunLastSpec()<CR>
 
 " Disable middle mouse button, F1
 map <MiddleMouse>   <Nop>
