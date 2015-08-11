@@ -142,3 +142,7 @@ cabbrev EP! e!
 
 " A rough opposite of J: inserts new-line. Real opposite of J, though, is: r<CR>
 nmap <C-J> i<CR><ESC>
+
+" Replace tildes with new lines to view X12
+map <leader>X    :%s/\~/\~\r/g<CR>
+
