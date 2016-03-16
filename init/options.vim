@@ -70,3 +70,9 @@ endif
 if has("gui_running")
   set noballooneval
 endif
+
+" Turn off visual bel
+set vb
+
+" Set ruby version
+let g:syntastic_ruby_mri_exec = "~/.rbenv/versions/2.3.0/bin/ruby"
