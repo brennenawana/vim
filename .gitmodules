@@ -142,3 +142,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = git@github.com:elixir-lang/vim-elixir.git
