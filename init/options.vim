@@ -71,7 +71,7 @@ if has("gui_running")
   set noballooneval
 endif
 
-" Turn off visual bel
+" Turn off visual bell
 set vb
 
 " Set ruby version
