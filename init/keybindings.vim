@@ -8,18 +8,12 @@ let maplocalleader = ";"
 cabbrev W w
 cabbrev Q q
 cabbrev Wq wq
-cabbrev Tabe tabe
-cabbrev Tabc tabc
 
 "set pastetoggle keybinding
 set pastetoggle=<F2>
 
 " Make Y consistent with D and C
 map Y           y$
-
-" Search
-nmap <leader>s  :%s/
-vmap <leader>s  :s/
 
 " Split screen
 map <leader>v   :vsp<CR>
@@ -30,9 +24,6 @@ map <leader>=   ^W=
 map <leader>j   ^Wj
 map <leader>k   ^Wk
 
-" Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
-map <D-<>       :tabedit ~/.vimrc<CR>
-
 " Reload .vimrc
 map <leader>rv  :source ~/.vimrc<CR>
 
@@ -42,10 +33,6 @@ map <D-Z>       :later 1<CR>
 
 " Auto-indent whole file
 nmap <leader>=  gg=G``
-map <silent> <F7> gg=G`` :delmarks z<CR>:echo "Reformatted."<CR>
-
-" Jump to a new line in insert mode
-imap <D-CR>     <Esc>o
 
 " Fast scrolling
 nnoremap <C-e>  3<C-e>
@@ -97,27 +84,19 @@ cmap <C-A> <C-B>
 
 " Copy current file path to system pasteboard
 map <leader>cp :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
-map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 
 " Run tests
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>ls :call RunLastSpec()<CR>
 
-" Disable middle mouse button, F1
-map <MiddleMouse>   <Nop>
-imap <MiddleMouse>  <Nop>
-map <F1>            <Nop>
-imap <F1>           <Nop>
-
 " Easy access to the shell
 map <Leader><Leader> :!
 
-" AckGrep current word
-map <leader>a :call AckGrep()<CR>
-" AckVisual current selection
-vmap <leader>a :call AckVisual()<CR>
+" AG current word
+map <leader>ag :Ag <cword><CR>
+" AG current selection
+vmap <leader>ag :Ag <cword><CR>
 
 " Recalculate diff when it gets messed up.
 nmap du :diffupdate<CR>
@@ -145,4 +124,3 @@ map <leader>V   :CommandT app/views<CR>
 map <leader>M   :CommandT app/models<CR>
 map <leader>C   :CommandT app/controllers<CR>
 map <leader>S   :CommandT spec/<CR>
-
