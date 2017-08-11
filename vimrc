@@ -19,8 +19,13 @@ execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"
 
 runtime! init/**.vim
+
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
 
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

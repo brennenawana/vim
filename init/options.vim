@@ -60,6 +60,7 @@ set autowriteall                " Save when doing various buffer-switching thing
 autocmd BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer or MacVim loses focus.
 
 let g:sql_type_default="postgresql"
+let g:jsx_ext_required = 0
 
 if $TERM == 'screen-256color'
   set t_RV=[>c

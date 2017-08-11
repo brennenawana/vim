@@ -1,1 +1,1 @@
-colorscheme github
+colorscheme molokai
